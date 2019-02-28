@@ -3,17 +3,17 @@ package util;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class MyArrayList<E> implements MyList<E> {
+public class ThreadsafeMyArrayList<E> implements MyList<E> {
     private Object[] elements;
     private int size;
 
-    public MyArrayList(int capacity) {
+    public ThreadsafeMyArrayList(int capacity) {
         elements = new Object[capacity];
         size = 0;
     }
 
     @Override
-    public void add(E element) {
+    public synchronized void add(E element) {
         if(size == elements.length) {
             elements = Arrays.copyOf(elements, size*2);
         }
@@ -22,12 +22,12 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public E get(int index) {
+    public synchronized E get(int index) {
         return (E)elements[index];
     }
 
     @Override
-    public int size() {
+    public synchronized int size() {
         return size;
     }
 

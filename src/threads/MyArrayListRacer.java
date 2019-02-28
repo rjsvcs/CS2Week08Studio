@@ -3,12 +3,12 @@ package threads;
 import util.MyArrayList;
 import util.MyList;
 
-public class MyArrayListRace implements Runnable {
+public class MyArrayListRacer implements Runnable {
 
     private final MyList<Integer> numbers;
     private final int max;
 
-    public MyArrayListRace(MyList<Integer> numbers, int max) {
+    public MyArrayListRacer(MyList<Integer> numbers, int max) {
         this.numbers = numbers;
         this.max = max;
     }
@@ -20,14 +20,11 @@ public class MyArrayListRace implements Runnable {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        int numberOfThreads = 10;
-        int max = 1000;
-
-        MyList<Integer> numbers = new MyArrayList<>(2);
-        MyList<Thread> threads = new MyArrayList<>(10);
+    public static void race(MyList<Integer> numbers, int numberOfThreads,
+                            int max) throws InterruptedException {
+        MyList<Thread> threads = new MyArrayList<>(numberOfThreads);
         for(int i=0; i<numberOfThreads; i++) {
-            MyArrayListRace racer = new MyArrayListRace(numbers, max);
+            MyArrayListRacer racer = new MyArrayListRacer(numbers, max);
             Thread thread = new Thread(racer);
             thread.start();
             threads.add(thread);
