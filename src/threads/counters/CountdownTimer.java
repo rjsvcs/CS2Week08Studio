@@ -1,4 +1,4 @@
-package threads;
+package threads.counters;
 
 public class CountdownTimer implements Runnable {
     @Override

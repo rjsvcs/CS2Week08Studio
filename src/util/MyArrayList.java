@@ -7,6 +7,10 @@ public class MyArrayList<E> implements MyList<E> {
     private Object[] elements;
     private int size;
 
+    public MyArrayList() {
+        this(2);
+    }
+
     public MyArrayList(int capacity) {
         elements = new Object[capacity];
         size = 0;

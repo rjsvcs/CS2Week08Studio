@@ -1,14 +1,15 @@
-package threads;
+package threads.lists;
 
-import util.MyArrayList;
 import util.MyList;
 
-public class MyArrayListRacer implements Runnable {
+import java.util.ArrayList;
+import java.util.List;
 
+public class MyListRacer implements Runnable {
     private final MyList<Integer> numbers;
     private final int max;
 
-    public MyArrayListRacer(MyList<Integer> numbers, int max) {
+    MyListRacer(MyList<Integer> numbers, int max) {
         this.numbers = numbers;
         this.max = max;
     }
@@ -21,10 +22,10 @@ public class MyArrayListRacer implements Runnable {
     }
 
     public static void race(MyList<Integer> numbers, int numberOfThreads,
-                            int max) throws InterruptedException {
-        MyList<Thread> threads = new MyArrayList<>(numberOfThreads);
-        for(int i=0; i<numberOfThreads; i++) {
-            MyArrayListRacer racer = new MyArrayListRacer(numbers, max);
+                             int max) throws InterruptedException {
+        List<Thread> threads = new ArrayList<>(numberOfThreads);
+        for(int n=0; n<numberOfThreads; n++) {
+            MyListRacer racer = new MyListRacer(numbers, max);
             Thread thread = new Thread(racer);
             thread.start();
             threads.add(thread);

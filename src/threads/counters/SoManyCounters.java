@@ -1,4 +1,4 @@
-package threads;
+package threads.counters;
 
 import java.util.Scanner;
 

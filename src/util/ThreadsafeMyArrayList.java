@@ -7,6 +7,10 @@ public class ThreadsafeMyArrayList<E> implements MyList<E> {
     private Object[] elements;
     private int size;
 
+    public ThreadsafeMyArrayList() {
+        this(2);
+    }
+
     public ThreadsafeMyArrayList(int capacity) {
         elements = new Object[capacity];
         size = 0;
