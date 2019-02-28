@@ -1,5 +1,7 @@
 package threads;
 
+import util.TextColor;
+
 import java.util.ArrayList;
 import java.util.List;
 

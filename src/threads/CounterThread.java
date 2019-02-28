@@ -1,5 +1,7 @@
 package threads;
 
+import util.TextColor;
+
 public class CounterThread extends Thread {
     private final String name;
 

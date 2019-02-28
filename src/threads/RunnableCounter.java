@@ -1,5 +1,7 @@
 package threads;
 
+import util.TextColor;
+
 public class RunnableCounter implements Runnable {
     private final String name;
 

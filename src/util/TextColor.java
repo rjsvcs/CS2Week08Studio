@@ -1,4 +1,4 @@
-package threads;
+package util;
 
 /**
  * An enumeration that is used to keep track of ANSII codes used to change the
