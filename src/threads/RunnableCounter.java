@@ -3,8 +3,8 @@ package threads;
 public class RunnableCounter implements Runnable {
     private final String name;
 
-    public RunnableCounter(String name) {
-        this.name = name;
+    public RunnableCounter(int number) {
+        name = TextColor.getColorString(number) + "runnable " + number;
     }
 
     @Override
@@ -15,7 +15,7 @@ public class RunnableCounter implements Runnable {
     }
 
     public static void main(String[] args) {
-        Runnable counter = new RunnableCounter("runnable 1");
+        Runnable counter = new RunnableCounter(1);
         Thread thread = new Thread(counter);
         thread.start();
     }

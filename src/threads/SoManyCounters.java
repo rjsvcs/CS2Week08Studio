@@ -8,7 +8,7 @@ public class SoManyCounters {
         System.out.print("Enter a positive number: ");
         int n = sc.nextInt();
         for(int i=0; i<n; i++) {
-            Runnable counter = new RunnableCounter("runnable " + i);
+            Runnable counter = new RunnableCounter(i);
             Thread thread = new Thread(counter);
             thread.start();
         }

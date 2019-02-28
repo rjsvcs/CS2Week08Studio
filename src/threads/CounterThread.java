@@ -3,8 +3,8 @@ package threads;
 public class CounterThread extends Thread {
     private final String name;
 
-    public CounterThread(String name) {
-        this.name = name;
+    public CounterThread(int number) {
+        this.name = TextColor.getColorString(number) + "thread " + number;
     }
 
     public void run() {
@@ -14,7 +14,7 @@ public class CounterThread extends Thread {
     }
 
     public static void main(String[] args) {
-        Thread counter = new CounterThread("thread 1");
+        Thread counter = new CounterThread(0);
         counter.start();
     }
 }
