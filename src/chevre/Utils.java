@@ -18,7 +18,8 @@ public class Utils {
     private static final String[] FIRST_NAMES = {
             "Goaty", "Goat", "Brad", "Charlie", "Karen", "Bleaty", "Bleats",
             "Beauregard", "Joseph", "Harold", "Jessica", "Brynn", "Dave",
-            "Rob", "Janet", "Allison", "Jim", "Randall", "Goatbert", "Tippy"
+            "Rob", "Janet", "Allison", "Jim", "Randall", "Goatbert", "Tippy",
+            "Hairy"
     };
 
     /**
@@ -28,7 +29,7 @@ public class Utils {
         "McGoatface", "Bleaterson", "Bleater", "Bahramewe", "Johnson",
         "Sharma", "Goatson", "McGoat", "O'Goater", "Farmington", "Winthorpe",
         "Spiner", "Stewart", "McBleater", "Wilson", "Fisher", "Harrison",
-        "Peterson", "Smith", "Reynolds"
+        "Peterson", "Smith", "Reynolds", "Hairybutt"
     };
 
     /**
@@ -39,10 +40,11 @@ public class Utils {
     };
 
     /**
-     * Returns
-     * @param min
-     * @param max
-     * @return
+     * Returns a random number between min and max (exclusive).
+     *
+     * @param min The minimum possible value.
+     * @param max The maximum possible value.
+     * @return A number between min and max (inclusive).
      */
     public static int getRandomNumber(int min, int max) {
         return RNG.nextInt(max - min) + min + 1;
@@ -74,5 +76,11 @@ public class Utils {
 
 
         return name;
+    }
+
+    public static void main(String[] args) {
+        while(true) {
+            System.out.println(makeGoatName());
+        }
     }
 }
