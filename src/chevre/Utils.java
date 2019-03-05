@@ -49,8 +49,9 @@ public class Utils {
     }
 
     /**
+     * Makes and returns a random goat name.
      *
-     * @return
+     * @return A randomly generated goat name.
      */
     public static String makeGoatName() {
         String name = FIRST_NAMES[RNG.nextInt(FIRST_NAMES.length)];
@@ -74,12 +75,4 @@ public class Utils {
 
         return name;
     }
-
-    public static void main(String[] args) throws InterruptedException {
-        while(true) {
-            System.out.println(makeGoatName());
-            Thread.sleep(1000);
-        }
-    }
-
 }
