@@ -48,6 +48,10 @@ public class Utils {
         return RNG.nextInt(max - min) + min + 1;
     }
 
+    /**
+     *
+     * @return
+     */
     public static String makeGoatName() {
         String name = FIRST_NAMES[RNG.nextInt(FIRST_NAMES.length)];
         String last = " " + LAST_NAMES[RNG.nextInt(LAST_NAMES.length)];
