@@ -19,7 +19,7 @@ public class Utils {
             "Goaty", "Goat", "Brad", "Charlie", "Karen", "Bleaty", "Bleats",
             "Beauregard", "Joseph", "Harold", "Jessica", "Brynn", "Dave",
             "Rob", "Janet", "Allison", "Jim", "Randall", "Goatbert", "Tippy",
-            "Hairy"
+            "Hairy", "Timothy", "Hairold", "Beardy", "Kiddo", "Brady"
     };
 
     /**
@@ -29,7 +29,8 @@ public class Utils {
         "McGoatface", "Bleaterson", "Bleater", "Bahramewe", "Johnson",
         "Sharma", "Goatson", "McGoat", "O'Goater", "Farmington", "Winthorpe",
         "Spiner", "Stewart", "McBleater", "Wilson", "Fisher", "Harrison",
-        "Peterson", "Smith", "Reynolds", "Hairybutt"
+        "Peterson", "Smith", "Reynolds", "Hairybutt", "McHoof", "McHairy",
+        "O'Horns"
     };
 
     /**
