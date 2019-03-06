@@ -78,8 +78,13 @@ public class Utils {
         return name;
     }
 
+    /**
+     * Tests goat name generation.
+     *
+     * @param args Ignored.
+     */
     public static void main(String[] args) {
-        while(true) {
+        for(int i=0; i<100; i++) {
             System.out.println(makeGoatName());
         }
     }
