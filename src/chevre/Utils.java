@@ -51,6 +51,15 @@ public class Utils {
     }
 
     /**
+     * Returns a double between 0.0 and 1.0 (inclusive).
+     *
+     * @return A double between 0.0 and 1.0 (inclusive).
+     */
+    public static double getRandomDouble() {
+        return RNG.nextDouble();
+    }
+
+    /**
      * Makes and returns a random goat name.
      *
      * @return A randomly generated goat name.
@@ -61,8 +70,8 @@ public class Utils {
 
         double suffixChance = 0.10d;
 
-        if(RNG.nextDouble() < 0.25d) {
-            char middleInitial = (char)(RNG.nextInt(25) + 65);
+        if(getRandomDouble() < 0.25d) {
+            char middleInitial = (char)(getRandomNumber(65, 90));
             name += " " + middleInitial + ".";
             suffixChance = 0.75d;
 
@@ -70,7 +79,7 @@ public class Utils {
 
         name += " " + LAST_NAMES[RNG.nextInt(LAST_NAMES.length)];
 
-        if(RNG.nextDouble() < suffixChance) {
+        if(getRandomDouble() < suffixChance) {
             name += " " + SUFFIXES[RNG.nextInt(SUFFIXES.length)];
         }
 
